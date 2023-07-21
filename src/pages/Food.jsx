@@ -15,9 +15,10 @@ function Food() {
     ];
  
     const getFood = async () =>{
-        let food = await fetch(
-            "www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata"
-            )
+        //This link does not work
+        // let food = await fetch(
+        //     "www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata"
+        //     )
         // let response = await food.json()
 
         // console.log(response)
