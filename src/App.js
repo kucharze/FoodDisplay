@@ -1,12 +1,16 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import Main from "./pages/Main";
+import Food from "./pages/Food";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div>
-      <h1>Test</h1>
+      <Navbar />
       <Routes>
-        <Route path="/" />
+        <Route path="/" element={<Main />} />
+        <Route path="/items" element={<Food />} />
       </Routes>
     </div>
   );
