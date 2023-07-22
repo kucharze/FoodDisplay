@@ -5,28 +5,31 @@ function Ingrediants() {
     let item = useParams().item
     const [food,setFood] = useState('')
 
-    // const url = 'https://edamam-food-and-grocery-database.p.rapidapi.com/api/food-database/v2/parser?nutrition-type=cooking&category%5B0%5D=generic-foods';
-    // const options = {
-    //     method: 'GET',
-    //     headers: {
-    //         'X-RapidAPI-Key': 'e8015e2cf4msh97855d9c2558c02p122c3ajsnaafe58f99606',
-    //         'X-RapidAPI-Host': 'edamam-food-and-grocery-database.p.rapidapi.com'
-    //     }
-    // };
+    const getItem = async () =>{
+        const url = `https://edamam-recipe-search.p.rapidapi.com/search?q=${item}`;
+        const options = {
+          method: 'GET',
+          headers: {
+            'X-RapidAPI-Key': 'e8015e2cf4msh97855d9c2558c02p122c3ajsnaafe58f99606',
+            'X-RapidAPI-Host': 'edamam-recipe-search.p.rapidapi.com'
+          }
+        };
+        try {
+            const response = await fetch(url, options);
+            const result = await response.json();
+            console.log(result);
+            // setFood(result.hints)
+            setFood(result)
+        } catch (error) {
+            console.error(error);
+        }
+    }
 
-    // const getItem = async () =>{
-    //     try {
-    //         const response = await fetch(url, options);
-    //         const result = await response.json();
-    //         console.log(result.hints);
-    //     } catch (error) {
-    //         console.error(error);
-    //     }
-    // }
+    useEffect(()=>{
+        // getItem()
 
-    // useEffect(()=>{
-    //     getItem()
-    // },[])
+        // fetchFood()
+    },[])
 
      //https://api.github.com/users/kucharze
   return (
