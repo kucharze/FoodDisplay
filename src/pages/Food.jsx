@@ -11,33 +11,6 @@ function Food() {
         { name: "butter", symbol: "butter" },
     ];
     const [food,setFood] = useState(null)
-
-    const fetchFood = async () =>{
-      const apiID = 'b70795e3'
-
-      var title = 'Test-Title'
-
-      var info = ['1 cup sugar','1 cup sugar 4 sticks butter']
-
-      const apiKey = '12fe01ecc2d68c847c4ac6e0c630491d'
-
-      const uri = `https://api.edaman.com/api/nurtrition-details?app_id=${apiID}&app_key=${apiKey}`
-
-      const options = {
-        method: 'POST',
-        cache: 'no-cache',
-          headers: {
-              'Content-Type' : 'application/json'
-          },
-          body: JSON.stringify({title,info})
-      }
-
-      var item = await fetch(uri,options).then(item.json())
-      
-      // var res = await item.json()
-
-      console.log(item)
-    }
    
 
 
