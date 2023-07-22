@@ -65,13 +65,13 @@ function Food() {
       <h1>The food page</h1>
       <h1>Hello</h1>
       {
-         food && 
-        // food.map((item,i)=>{
-        //   console.log(item.q)
-        //     // return <Link key={i} to={`/ingrediants/:${item.food}`}><h2>{item.food.label}</h2></Link>
-        //     return <h2>{item.q}</h2>
-        // })
-        <h2>{food.q}</h2>
+        //  food && 
+        foodList.map((item,i)=>{
+          console.log(item.q)
+            return <Link key={i} to={`/ingrediants/:${item.symbol}`}><h2>{item.name}</h2></Link>
+            // return <h2>{item.q}</h2>
+        })
+        // <h2>{food.q}</h2>
       }
     </div>
   )

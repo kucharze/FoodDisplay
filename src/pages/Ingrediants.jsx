@@ -26,7 +26,7 @@ function Ingrediants() {
     }
 
     useEffect(()=>{
-        // getItem()
+         getItem()
 
         // fetchFood()
     },[])
@@ -36,6 +36,9 @@ function Ingrediants() {
     <div>
       <h1>The Ingrediants</h1>
       <h2>The param is {item}</h2>
+      <h1>{food && food.hits[0].recipe.label}</h1>
+      <h1>{food && food.hits[1].recipe.label}</h1>
+      <h1>{food && food.hits[2].recipe.label}</h1>
     </div>
   )
 }
