@@ -7,8 +7,8 @@ function Food() {
    
       const foodList = [
         { name: "Chicken", symbol: "chicken" },
-        { name: "Steak", symbol: "Steak" },
-        { name: "Dash", symbol: "DASH" },
+        { name: "Steak", symbol: "steak" },
+        { name: "butter", symbol: "butter" },
     ];
     const [food,setFood] = useState(null)
 
