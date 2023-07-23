@@ -1,5 +1,5 @@
 .App {
-  background-image: url("https://img.freepik.com/premium-vector/white-grey-checkered-seamless-pattern_197792-1534.jpg?w=2000");
+  background-image: url("https://www.ninesmw.com/cdn/shop/products/Nines_25835_1024x1024.jpg?v=1663622480");
   background-size: contain;
   color: red;
   display: flex;
@@ -38,6 +38,7 @@
 }
 .main {
   background-color: lightgray;
+  text-align: center;
   padding: 20px;
   border: solid red;
 }
