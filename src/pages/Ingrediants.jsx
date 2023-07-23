@@ -17,7 +17,7 @@ function Ingrediants() {
         try {
             const response = await fetch(url, options);
             const result = await response.json();
-            console.log(result);
+            //console.log(result);
             // setFood(result.hints)
             setFood(result.hits)
         } catch (error) {
@@ -35,11 +35,22 @@ function Ingrediants() {
   return (
     <div>
       <h1>The Ingrediants</h1>
-      <h2>The param is {item}</h2>
+      <h2>See recipe's and ingrediants involving {item}</h2>
       {
         food && food.map((item)=>{
-            return <div>
+            // console.log(typeof(item.recipe.ingredientLines))
+            return <div key={item.recipe.label}>
                 <h1>{item.recipe.label}</h1>
+                <img src={item.recipe.image}/>
+                <h2>Recipe:</h2>
+                
+                <ul>
+                    {
+                        item.recipe.ingredientLines.map((i)=>{
+                            return <li key={i}>{i}</li>
+                        })
+                    }
+                </ul>
             </div>
         })
       }
