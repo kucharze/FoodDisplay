@@ -19,7 +19,7 @@ function Ingrediants() {
             const result = await response.json();
             console.log(result);
             // setFood(result.hints)
-            setFood(result)
+            setFood(result.hits)
         } catch (error) {
             console.error(error);
         }
@@ -36,9 +36,16 @@ function Ingrediants() {
     <div>
       <h1>The Ingrediants</h1>
       <h2>The param is {item}</h2>
-      <h1>{food && food.hits[0].recipe.label}</h1>
+      {
+        food && food.map((item)=>{
+            return <div>
+                <h1>{item.recipe.label}</h1>
+            </div>
+        })
+      }
+      {/* <h1>{food && food.hits[0].recipe.label}</h1>
       <h1>{food && food.hits[1].recipe.label}</h1>
-      <h1>{food && food.hits[2].recipe.label}</h1>
+      <h1>{food && food.hits[2].recipe.label}</h1> */}
     </div>
   )
 }
