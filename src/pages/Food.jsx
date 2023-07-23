@@ -65,7 +65,7 @@ function Food() {
     // },[])
 
   return (
-    <div >
+    <div className='title'>
       <h1>The food page</h1>
       <h1>Check out our selections</h1>
       <hr />
