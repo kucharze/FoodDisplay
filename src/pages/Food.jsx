@@ -10,6 +10,9 @@ function Food() {
         { name: "Steak", symbol: "steak" },
         { name: "Butter", symbol: "butter" },
         { name: "Fish", symbol: "fish" },
+        { name: "Pork", symbol: "pork" },
+        { name: "Ribs", symbol: "ribs" },
+        { name: "Pasta", symbol: "pasta" },
     ];
     const [food,setFood] = useState(null)
    

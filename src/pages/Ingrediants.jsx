@@ -41,7 +41,7 @@ function Ingrediants() {
             // console.log(typeof(item.recipe.ingredientLines))
             return <div key={item.recipe.label}>
                 <h1>{item.recipe.label}</h1>
-                <img src={item.recipe.image}/>
+                <img src={item.recipe.image} className='foodImage'/>
                 <h2>Recipe:</h2>
                 <ul>
                     {
