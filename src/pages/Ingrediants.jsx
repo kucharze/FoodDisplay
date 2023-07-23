@@ -33,7 +33,7 @@ function Ingrediants() {
 
      //https://api.github.com/users/kucharze
   return (
-    <div>
+    <div className='foodList'>
       <h1>The Ingrediants</h1>
       <h2>See recipe's and ingrediants involving {item}</h2>
       {

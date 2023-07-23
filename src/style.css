@@ -1,3 +1,27 @@
 .App {
   background-color: green;
+  color: yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.foodList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  background-color: black;
+  color: white;
+  padding: 15px;
+  font-size: 2em;
+}
+
+.nav a {
+  color: lightgray;
+  text-decoration: none;
 }
