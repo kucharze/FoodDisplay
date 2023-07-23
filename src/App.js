@@ -7,7 +7,7 @@ import Ingrediants from "./pages/Ingrediants";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Navbar />
       <Routes>
         <Route path="/" element={<Main />} />
