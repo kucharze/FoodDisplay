@@ -22,7 +22,7 @@
   align-items: center;
   margin: 10px;
   font-size: 25px;
-  background-color: white;
+  background-color: lightgray;
   padding: 20px;
 }
 
@@ -55,9 +55,10 @@ li {
   font-size: 25px;
 }
 .nav a {
-  color: lightgray;
+  color: white;
   text-decoration: none;
 }
 
-a:visited {
+.food a {
+  color: red;
 }
