@@ -8,8 +8,8 @@ function Food() {
       const foodList = [
         { name: "Chicken", symbol: "chicken" },
         { name: "Steak", symbol: "steak" },
-        { name: "butter", symbol: "butter" },
-        { name: "fish", symbol: "fish" },
+        { name: "Butter", symbol: "butter" },
+        { name: "Fish", symbol: "fish" },
     ];
     const [food,setFood] = useState(null)
    
@@ -62,18 +62,22 @@ function Food() {
     // },[])
 
   return (
-    <div>
+    <div >
       <h1>The food page</h1>
-      <h1>Hello</h1>
-      {
-        //  food && 
-        foodList.map((item,i)=>{
-          //console.log(item.q)
-            return <Link key={i} 
-            to={`/ingrediants/:${item.symbol}`}><h2>{item.name}</h2></Link>
-        })
-        // <h2>{food.q}</h2>
-      }
+      <h1>Check out our selections</h1>
+      <hr />
+      <div className='food'>
+         {
+            //  food && 
+            foodList.map((item,i)=>{
+              //console.log(item.q)
+                return <Link key={i} 
+                to={`/ingrediants/:${item.symbol}`}><h2>{item.name}</h2></Link>
+            })
+            // <h2>{food.q}</h2>
+          }
+      </div>
+     
     </div>
   )
 }
