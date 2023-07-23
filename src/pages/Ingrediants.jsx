@@ -43,7 +43,6 @@ function Ingrediants() {
                 <h1>{item.recipe.label}</h1>
                 <img src={item.recipe.image}/>
                 <h2>Recipe:</h2>
-                
                 <ul>
                     {
                         item.recipe.ingredientLines.map((i)=>{

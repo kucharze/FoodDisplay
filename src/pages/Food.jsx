@@ -9,56 +9,57 @@ function Food() {
         { name: "Chicken", symbol: "chicken" },
         { name: "Steak", symbol: "steak" },
         { name: "butter", symbol: "butter" },
+        { name: "fish", symbol: "fish" },
     ];
     const [food,setFood] = useState(null)
    
 
 
-    const getItem = async () =>{
-      //   const url = 'https://edamam-food-and-grocery-database.p.rapidapi.com/api/food-database/v2/parser?nutrition-type=cooking&category%5B0%5D=generic-foods&health%5B0%5D=alcohol-free&knownAs%5B0%5D=Cheese';
+    // const getItem = async () =>{
+    //   //   const url = 'https://edamam-food-and-grocery-database.p.rapidapi.com/api/food-database/v2/parser?nutrition-type=cooking&category%5B0%5D=generic-foods&health%5B0%5D=alcohol-free&knownAs%5B0%5D=Cheese';
     
-      // const options = {
-      //     method: 'GET',
-      //     headers: {
-      //         'X-RapidAPI-Key': 'e8015e2cf4msh97855d9c2558c02p122c3ajsnaafe58f99606',
-      //         'X-RapidAPI-Host': 'edamam-food-and-grocery-database.p.rapidapi.com'
-      //     }
-      // };
+    //   // const options = {
+    //   //     method: 'GET',
+    //   //     headers: {
+    //   //         'X-RapidAPI-Key': 'e8015e2cf4msh97855d9c2558c02p122c3ajsnaafe58f99606',
+    //   //         'X-RapidAPI-Host': 'edamam-food-and-grocery-database.p.rapidapi.com'
+    //   //     }
+    //   // };
 
-        //   const url = 'https://edamam-edamam-nutrition-analysis.p.rapidapi.com/api/nutrition-data?ingr=%3CREQUIRED%3E&nutrition-type=cooking';
-        // const options = {
-        //   method: 'GET',
-        //   headers: {
-        //     'X-RapidAPI-Key': 'e8015e2cf4msh97855d9c2558c02p122c3ajsnaafe58f99606',
-        //     'X-RapidAPI-Host': 'edamam-edamam-nutrition-analysis.p.rapidapi.com'
-        //   }
-        // };
+    //     //   const url = 'https://edamam-edamam-nutrition-analysis.p.rapidapi.com/api/nutrition-data?ingr=%3CREQUIRED%3E&nutrition-type=cooking';
+    //     // const options = {
+    //     //   method: 'GET',
+    //     //   headers: {
+    //     //     'X-RapidAPI-Key': 'e8015e2cf4msh97855d9c2558c02p122c3ajsnaafe58f99606',
+    //     //     'X-RapidAPI-Host': 'edamam-edamam-nutrition-analysis.p.rapidapi.com'
+    //     //   }
+    //     // };
 
 
-        const url = 'https://edamam-recipe-search.p.rapidapi.com/search?q=steak';
-        const options = {
-          method: 'GET',
-          headers: {
-            'X-RapidAPI-Key': 'e8015e2cf4msh97855d9c2558c02p122c3ajsnaafe58f99606',
-            'X-RapidAPI-Host': 'edamam-recipe-search.p.rapidapi.com'
-          }
-        };
-        try {
-            const response = await fetch(url, options);
-            const result = await response.json();
-            console.log(result);
-            // setFood(result.hints)
-            setFood(result)
-        } catch (error) {
-            console.error(error);
-        }
-    }
+    //     const url = 'https://edamam-recipe-search.p.rapidapi.com/search?q=steak';
+    //     const options = {
+    //       method: 'GET',
+    //       headers: {
+    //         'X-RapidAPI-Key': 'e8015e2cf4msh97855d9c2558c02p122c3ajsnaafe58f99606',
+    //         'X-RapidAPI-Host': 'edamam-recipe-search.p.rapidapi.com'
+    //       }
+    //     };
+    //     try {
+    //         const response = await fetch(url, options);
+    //         const result = await response.json();
+    //         //console.log(result);
+    //         // setFood(result.hints)
+    //         setFood(result)
+    //     } catch (error) {
+    //         console.error(error);
+    //     }
+    // }
 
-    useEffect(()=>{
-        getItem()
+    // useEffect(()=>{
+    //     getItem()
 
-        // fetchFood()
-    },[])
+    //     // fetchFood()
+    // },[])
 
   return (
     <div>
@@ -67,9 +68,9 @@ function Food() {
       {
         //  food && 
         foodList.map((item,i)=>{
-          console.log(item.q)
-            return <Link key={i} to={`/ingrediants/:${item.symbol}`}><h2>{item.name}</h2></Link>
-            // return <h2>{item.q}</h2>
+          //console.log(item.q)
+            return <Link key={i} 
+            to={`/ingrediants/:${item.symbol}`}><h2>{item.name}</h2></Link>
         })
         // <h2>{food.q}</h2>
       }
